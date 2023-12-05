@@ -1,6 +1,7 @@
 import './App.css';
 import styled from "styled-components";
 import {Header} from "./components/header/Header";
+import {Skills} from './components/skills/Skills';
 
 export const App = () => {
     return (
@@ -8,7 +9,7 @@ export const App = () => {
             <Header/>
             {/*<About/>*/}
             {/*<Projects/>*/}
-            {/*<Skills/>*/}
+            <Skills/>
             {/*<Contacts/>*/}
             {/*<Footer/>*/}
         </AppWrapper>
@@ -16,7 +17,7 @@ export const App = () => {
 }
 
 const AppWrapper = styled.div`
-    display: flex;
-    flex-flow: column;
-    height: 100vh;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
 `

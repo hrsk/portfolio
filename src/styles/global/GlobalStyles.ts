@@ -11,9 +11,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-size: contain;
+    background-size: cover;
     background:url(${background_image});
     margin: 0;
+    color: #f5f5f7;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.95;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
