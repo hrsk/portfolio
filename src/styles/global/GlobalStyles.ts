@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background-size: cover;
-    background:url(${background_image});
+    background: url(${background_image});
     margin: 0;
     color: #f5f5f7;
     font-size: 14px;
