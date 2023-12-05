@@ -1,9 +1,22 @@
 import './App.css';
+import styled from "styled-components";
+import {Header} from "./components/header/Header";
 
 export const App = () => {
-  return (
-    <div className="App">
-      <h3>PORTFOLIO</h3>
-    </div>
-  );
+    return (
+        <AppWrapper>
+            <Header/>
+            {/*<About/>*/}
+            {/*<Projects/>*/}
+            {/*<Skills/>*/}
+            {/*<Contacts/>*/}
+            {/*<Footer/>*/}
+        </AppWrapper>
+    );
 }
+
+const AppWrapper = styled.div`
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+`
