@@ -4,6 +4,7 @@ import {Header} from "./components/header/Header";
 import {Skills} from './components/skills/Skills';
 import {Footer} from "./components/footer/Footer";
 import {About} from "./components/about/About";
+import {Contacts} from "./components/contacts/Contacts";
 
 export const App = () => {
     return (
@@ -12,7 +13,7 @@ export const App = () => {
             <About/>
             {/*<Projects/>*/}
             <Skills/>
-            {/*<Contacts/>*/}
+            <Contacts/>
             <Footer/>
         </AppWrapper>
     );
