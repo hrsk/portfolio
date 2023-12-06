@@ -5,13 +5,14 @@ import {Skills} from './components/skills/Skills';
 import {Footer} from "./components/footer/Footer";
 import {About} from "./components/about/About";
 import {Contacts} from "./components/contacts/Contacts";
+import {Projects} from "./components/projects/Projects";
 
 export const App = () => {
     return (
         <AppWrapper>
             <Header/>
             <About/>
-            {/*<Projects/>*/}
+            <Projects/>
             <Skills/>
             <Contacts/>
             <Footer/>
