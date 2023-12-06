@@ -2,16 +2,18 @@ import './App.css';
 import styled from "styled-components";
 import {Header} from "./components/header/Header";
 import {Skills} from './components/skills/Skills';
+import {Footer} from "./components/footer/Footer";
+import {About} from "./components/about/About";
 
 export const App = () => {
     return (
         <AppWrapper>
             <Header/>
-            {/*<About/>*/}
+            <About/>
             {/*<Projects/>*/}
             <Skills/>
             {/*<Contacts/>*/}
-            {/*<Footer/>*/}
+            <Footer/>
         </AppWrapper>
     );
 }
