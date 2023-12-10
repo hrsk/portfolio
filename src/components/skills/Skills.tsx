@@ -1,12 +1,7 @@
 import React from "react";
 import {Header} from "../../common/header/Header";
 import styled from "styled-components";
-import js_image from "./../../assets/skills/JavaScript-logo.png"
-import react_image from "./../../assets/skills/react.png"
-import redux_image from "./../../assets/skills/redux.png"
-import node_image from "./../../assets/skills/node.png"
-import html_css_image from "./../../assets/skills/htmlcss.png"
-import typescript_image from "./../../assets/skills/Typescript-logo.png"
+import sprite from "./../../assets/images/icons//skills/sprite.svg"
 
 export const Skills = () => {
     return (
@@ -16,9 +11,9 @@ export const Skills = () => {
             />
             <SkillsWrapper>
                 <SkillWrapper>
-                    <SkillIcon src={html_css_image}/>
+                    <SkillIconImage iconId={'html_icon'}/>
                     <SkillDescription>
-                        <h3>HTML/CSS</h3>
+                        <h3>HTML</h3>
                         <span>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit Dolore, porro rem quod illo quam,
                             eum alias id, repellendus magni, quas.
@@ -26,7 +21,17 @@ export const Skills = () => {
                     </SkillDescription>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillIcon src={js_image}/>
+                    <SkillIconImage iconId={'css_icon'}/>
+                    <SkillDescription>
+                        <h3>CSS</h3>
+                        <span>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit Dolore, porro rem quod illo quam,
+                            eum alias id, repellendus magni, quas.
+            </span>
+                    </SkillDescription>
+                </SkillWrapper>
+                <SkillWrapper>
+                    <SkillIconImage iconId={'javascript_icon'}/>
                     <SkillDescription>
                         <h3>Javasript</h3>
                         <span>
@@ -36,7 +41,7 @@ export const Skills = () => {
                     </SkillDescription>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillIcon src={react_image}/>
+                    <SkillIconImage iconId={'react_icon'}/>
                     <SkillDescription>
                         <h3>ReactJS</h3>
                         <span>
@@ -46,7 +51,7 @@ export const Skills = () => {
                     </SkillDescription>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillIcon src={redux_image}/>
+                    <SkillIconImage iconId={'redux_icon'}/>
                     <SkillDescription>
                         <h3>Redux</h3>
                         <span>
@@ -56,19 +61,9 @@ export const Skills = () => {
                     </SkillDescription>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillIcon src={typescript_image}/>
+                    <SkillIconImage iconId={'typescript_icon'}/>
                     <SkillDescription>
                         <h3>TypeScript</h3>
-                        <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit Dolore, porro rem quod illo quam,
-                            eum alias id, repellendus magni, quas.
-            </span>
-                    </SkillDescription>
-                </SkillWrapper>
-                <SkillWrapper>
-                    <SkillIcon src={node_image}/>
-                    <SkillDescription>
-                        <h3>Node.js</h3>
                         <span>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit Dolore, porro rem quod illo quam,
                             eum alias id, repellendus magni, quas.
@@ -117,7 +112,20 @@ const SkillDescription = styled.div`
     font-size: 16px;
   }
 `
-const SkillIcon = styled.img`
-  height: 64px;
-  width: 64px;
+
+const SkillIcon = styled.svg`
+  width: 160px;
+  height: 160px;
+  background-size: 100% auto;
 `
+
+type PropsType = {
+    iconId: string
+}
+const SkillIconImage = (props: PropsType) => {
+    return (
+        <SkillIcon>
+            <use xlinkHref={`${sprite}#${props.iconId}`}/>
+        </SkillIcon>
+    )
+}
