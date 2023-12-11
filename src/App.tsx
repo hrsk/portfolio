@@ -1,11 +1,11 @@
 import './App.css';
 import styled from "styled-components";
-import {Header} from "./components/header/Header";
-import {Skills} from './components/skills/Skills';
-import {Footer} from "./components/footer/Footer";
-import {About} from "./components/about/About";
-import {Contacts} from "./components/contacts/Contacts";
-import {Projects} from "./components/projects/Projects";
+import {Header} from "./layout/header/Header";
+import {Skills} from './layout/skills/Skills';
+import {Footer} from "./layout/footer/Footer";
+import {About} from "./layout/about/About";
+import {Contacts} from "./layout/contacts/Contacts";
+import {Projects} from "./layout/projects/Projects";
 
 export const App = () => {
     return (

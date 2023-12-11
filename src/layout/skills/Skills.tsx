@@ -1,5 +1,5 @@
 import React from "react";
-import {Header} from "../../common/header/Header";
+import {Header} from "../../components/header/Header";
 import styled from "styled-components";
 import sprite from "./../../assets/images/icons//skills/sprite.svg"
 

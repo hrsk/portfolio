@@ -3,28 +3,34 @@ import styled from "styled-components";
 
 export const Nav = () => {
     return (
-        <ListWrapper>
-            <li><a href="/homepage">Homepage</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/skills">Skills</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contacts">Contacts</a></li>
-        </ListWrapper>
+        <NavWrapper>
+            <ListWrapper>
+                <li><a href="/homepage">Homepage</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contacts">Contacts</a></li>
+            </ListWrapper>
+        </NavWrapper>
     );
 }
+
+const NavWrapper = styled.nav`
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+`
 
 const ListWrapper = styled.ul`
   display: flex;
   flex-flow: row;
-  justify-content: center;
-  gap: 50px;
+  gap: 40px;
   list-style: none;
 
   li {
-    display: list-item;
+    display: flex;
     color: #f5f5f7;
     position: relative;
-
     a {
       text-decoration: none;
       color: #f5f5f7;
