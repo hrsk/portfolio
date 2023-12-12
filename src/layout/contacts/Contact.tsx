@@ -59,12 +59,9 @@ const Form = styled.form`
   min-width: 540px;
 
   h2 {
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 25px;
-    //margin-bottom: 1rem!important;
+    padding-bottom: 15px;
   }
-
+  
   textarea {
     width: 100%;
     height: 120px;
@@ -99,13 +96,7 @@ const ContactsInfoWrapper = styled.div`
   align-items: center;
 
   h2 {
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 25px;
-  }
-
-  p {
-    line-height: 1.8;
+    padding-bottom: 15px;
   }
 
 `
