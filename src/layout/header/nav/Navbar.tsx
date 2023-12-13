@@ -17,8 +17,9 @@ export const Nav = () => {
 
 const NavWrapper = styled.nav`
   display: flex;
-  flex-flow: row;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 `
 
 const ListWrapper = styled.ul`
