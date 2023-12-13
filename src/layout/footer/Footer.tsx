@@ -9,11 +9,10 @@ export const Footer = () => {
     );
 }
 
-const FooterWrapper = styled.div`
-  background-color: #1a181c;
-  min-height: 45px;
+const FooterWrapper = styled.small`
+  background-color: #0f0f11;
   display: flex;
-  flex-flow: row;
+  flex-direction: row;
   justify-content: center;
   padding: 10px;
 

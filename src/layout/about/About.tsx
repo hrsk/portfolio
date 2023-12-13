@@ -2,7 +2,6 @@ import React from "react";
 import {Header} from "../../components/header/Header";
 import styled from "styled-components";
 
-
 export const About = () => {
     return (
         <AboutWrapper>
@@ -11,57 +10,41 @@ export const About = () => {
             />
             <InfoWrapper>
                 <Description>
-                    <DescriptionTitle>
-                        <h2>Who am i?</h2>
-                        <h6>I'm Yegor Gursky, a Frontend Developer</h6>
-                    </DescriptionTitle>
-                    <DescriptionText>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.
-                    </DescriptionText>
+                    <h2>Who am i?</h2>
+                    <h6>I'm Yegor Gursky, a Frontend Developer</h6>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit Dolore, porro rem quod illo quam, eum
+                        alias id, repellendus magni, quas.
+                    </p>
                 </Description>
                 <ContactWrapper>
-                    <Row>
-                        <h4>Name:</h4>
-                        <p>Yegor Gursky</p>
-                    </Row>
-                    <Row>
-                        <h4>Age:</h4>
-                        <p>31</p>
-                    </Row>
-                    <Row>
-                        <h4>Email:</h4>
-                        <p><a href="mailto:gurskygursky@example.com">hrsk.yegor@example.com</a></p>
-                    </Row>
-                    <Row>
-                        <h4>From:</h4>
-                        <p>Minsk, Belarus</p>
-                    </Row>
+                    <h4>Name:</h4>
+                    <p>Yegor Gursky</p>
+                    <h4>Age:</h4>
+                    <p>31</p>
+                    <h4>Email:</h4>
+                    <p><a href="mailto:gurskygursky@example.com">hrsk.yegor@example.com</a></p>
+                    <h4>From:</h4>
+                    <p>Minsk, Belarus</p>
                 </ContactWrapper>
             </InfoWrapper>
         </AboutWrapper>
     );
 }
 
-const AboutWrapper = styled.div`
-  height: max-content;
-  display: flex;
-  flex-flow: column;
+const AboutWrapper = styled.section`
   padding: 15px 0 15px 0;
 `
 
 const InfoWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  width: 100%;
+  gap: 100px;
 `
 
 const Description = styled.div`
-  display: flex;
-  flex-flow: column;
-  width: 600px;
-`
-
-const DescriptionTitle = styled.div`
   h2 {
     color: #009e66;
     font-size: 18px;
@@ -74,18 +57,9 @@ const DescriptionTitle = styled.div`
     padding-bottom: 15px;
   }
 `
-const DescriptionText = styled.p`
-  margin: 0;
-`
 
-const ContactWrapper = styled.address`
-  font-size: 15px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-`
-const Row = styled.div`
-  display: flex;
-  flex-flow: row;
-  gap: 30px;
+const ContactWrapper = styled.div`
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
 `

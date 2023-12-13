@@ -39,7 +39,6 @@ export const Contact = () => {
 }
 
 const ContactWrapper = styled.section`
-  height: 100vh;
   display: flex;
   flex-flow: column;
   padding: 15px 0 15px 0;
