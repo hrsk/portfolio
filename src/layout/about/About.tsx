@@ -16,11 +16,7 @@ export const About = () => {
                         <h6>I'm Yegor Gursky, a Frontend Developer</h6>
                     </DescriptionTitle>
                     <DescriptionText>
-                        I am a freelancer based in the United Kingdom and i have been building noteworthy
-                        UX/UI
-                        designs and websites for years, which comply with the latest design trends. I help
-                        convert a vision and an idea into meaningful and useful products. Having a sharp eye for
-                        product evolution helps me prioritize tasks, iterate fast and deliver faster.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.
                     </DescriptionText>
                 </Description>
                 <ContactWrapper>

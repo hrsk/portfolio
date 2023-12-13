@@ -10,7 +10,7 @@ export const Contact = () => {
             />
             <ContactContainer>
                 <ContactsInfoWrapper>
-                    <h2>ADDRESS</h2>
+                    <h3>ADDRESS</h3>
                     {/*<p>Always available for freelance<br/>*/}
                     {/*    work if the right project comes along,<br/>*/}
                     {/*    Feel free to contact me!<br/>*/}
@@ -27,7 +27,7 @@ export const Contact = () => {
                     <p><span>icon</span>chat@example.com</p>
                 </ContactsInfoWrapper>
                 <Form>
-                    <h2>SEND US A NOTE</h2>
+                    <h3>SEND US A NOTE</h3>
                     <Field type={'text'} placeholder={'Name'}/>
                     <Field type={'email'} placeholder={'Email'}/>
                     <textarea placeholder={'Message'}/>
@@ -58,7 +58,7 @@ const Form = styled.form`
   justify-content: space-between;
   min-width: 540px;
 
-  h2 {
+  h3 {
     padding-bottom: 15px;
   }
   
@@ -82,7 +82,9 @@ const Field = styled.input.attrs((props) => ({
   background-color: #343a40;
 `;
 
-const Button = styled.button`
+const Button = styled.button.attrs((props) => ({
+    type: props.type || 'submit'
+}))`
   width: 150px;
   height: 35px;
   border-radius: 15px;
@@ -95,8 +97,7 @@ const ContactsInfoWrapper = styled.div`
   flex-flow: column;
   align-items: center;
 
-  h2 {
+  h3 {
     padding-bottom: 15px;
   }
-
 `

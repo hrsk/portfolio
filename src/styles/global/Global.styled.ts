@@ -1,5 +1,4 @@
 import {createGlobalStyle} from "styled-components";
-import background_image from './../../assets/background/background.jpg';
 import {theme} from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
@@ -13,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background-size: cover;
-    background: url(${background_image});
+    background-color: #1a181d;
     margin: 0;
     //color: #f5f5f7;
     color: ${theme.colors.fonts.font};

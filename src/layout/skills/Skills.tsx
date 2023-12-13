@@ -1,7 +1,7 @@
 import React from "react";
 import {Header} from "../../components/header/Header";
 import styled from "styled-components";
-import sprite from "./../../assets/images/icons//skills/sprite.svg"
+import {SkillIconImage} from "./SkillIconImage";
 
 export const Skills = () => {
     return (
@@ -11,7 +11,7 @@ export const Skills = () => {
             />
             <SkillsWrapper>
                 <SkillWrapper>
-                    <SkillIconImage iconId={'html_icon'}/>
+                    <SkillIconImage iconId={'html_icon'} viewBox={'0 0 32 32'}/>
                     <SkillDescription>
                         <h3>HTML</h3>
                         <span>
@@ -21,7 +21,7 @@ export const Skills = () => {
                     </SkillDescription>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillIconImage iconId={'css_icon'}/>
+                    <SkillIconImage iconId={'css_icon'} viewBox={'0 0 32 32'}/>
                     <SkillDescription>
                         <h3>CSS</h3>
                         <span>
@@ -31,7 +31,7 @@ export const Skills = () => {
                     </SkillDescription>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillIconImage iconId={'javascript_icon'}/>
+                    <SkillIconImage iconId={'javascript_icon'} viewBox={'0 0 128 128'}/>
                     <SkillDescription>
                         <h3>Javasript</h3>
                         <span>
@@ -41,7 +41,7 @@ export const Skills = () => {
                     </SkillDescription>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillIconImage iconId={'react_icon'}/>
+                    <SkillIconImage iconId={'react_icon'} viewBox={'0 0 128 128'}/>
                     <SkillDescription>
                         <h3>ReactJS</h3>
                         <span>
@@ -51,7 +51,7 @@ export const Skills = () => {
                     </SkillDescription>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillIconImage iconId={'redux_icon'}/>
+                    <SkillIconImage iconId={'redux_icon'} viewBox={'0 0 128 128'}/>
                     <SkillDescription>
                         <h3>Redux</h3>
                         <span>
@@ -61,7 +61,7 @@ export const Skills = () => {
                     </SkillDescription>
                 </SkillWrapper>
                 <SkillWrapper>
-                    <SkillIconImage iconId={'typescript_icon'}/>
+                    <SkillIconImage iconId={'typescript_icon'} viewBox={'0 0 128 128'}/>
                     <SkillDescription>
                         <h3>TypeScript</h3>
                         <span>
@@ -112,20 +112,3 @@ const SkillDescription = styled.div`
     font-size: 16px;
   }
 `
-
-const SkillIcon = styled.svg`
-  width: 160px;
-  height: 160px;
-  background-size: 100% auto;
-`
-
-type PropsType = {
-    iconId: string
-}
-const SkillIconImage = (props: PropsType) => {
-    return (
-        <SkillIcon>
-            <use xlinkHref={`${sprite}#${props.iconId}`}/>
-        </SkillIcon>
-    )
-}

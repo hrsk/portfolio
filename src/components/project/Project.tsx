@@ -11,14 +11,9 @@ export const Project = (props: PropsType) => {
         <ProjectContainer>
             <ImageWrapperContainer>
                 <ImageWrapperBox>
-                    <Description>
-                        <p>{props.descriptionText}</p>
+                    <p>{props.descriptionText}</p>
+                    <ClickedLink href={`https://github.com/hrsk/classwork-todolist}`}>More Info</ClickedLink>
 
-                        <LinkBox>
-                            <ClickedLink href={`https://github.com/hrsk/classwork-todolist}`}>Demo</ClickedLink>
-                            <ClickedLink href={`https://github.com/hrsk/classwork-todolist`}>Code</ClickedLink>
-                        </LinkBox>
-                    </Description>
                 </ImageWrapperBox>
                 <Img src={props.src} alt={'todo'}/>
             </ImageWrapperContainer>
@@ -28,27 +23,27 @@ export const Project = (props: PropsType) => {
         </ProjectContainer>
     )
 }
-const Description = styled.div`
-  padding: 5px 20px;
-  text-align: center;
-
-  p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #ffffff;
-  }
-
-  a {
-    text-decoration: none;
-  }
-`
-const LinkBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-`
+// const Description = styled.div`
+//   padding: 5px 20px;
+//   text-align: center;
+//
+//   p {
+//     font-size: 14px;
+//     font-weight: 400;
+//     line-height: 1.7;
+//     color: #ffffff;
+//   }
+//
+//   a {
+//     text-decoration: none;
+//   }
+// `
+// const LinkBox = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   gap: 20px;
+// `
 const ClickedLink = styled.a`
   color: #009e66;
   font-weight: 600;
@@ -69,20 +64,12 @@ const ClickedLink = styled.a`
     text-decoration: none;
   }
 `
-const Img = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 7px;
-`
-const ProjectContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
+
+const ProjectContainer = styled.article`
+  //display: flex;
+  //flex-direction: column;
+  //overflow: hidden;
+  //position: relative;
   max-width: 540px;
   width: 100%;
 `
@@ -90,34 +77,48 @@ const ImageWrapperBox = styled.div`
   background-color: rgba(0, 0, 0, .9);
   bottom: 0;
   position: absolute;
-  transition: all .15s ease-in-out;
+  //transition: all .15s ease-in-out;
   visibility: hidden;
   max-width: 540px;
   width: 100%;
   height: 100%;
   z-index: 1;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  padding: 15px;
+  //align-items: center;
   justify-content: center;
+  text-align: center;
 `
 const ImageWrapperContainer = styled.div`
-  display: flex;
-  padding: 0 0 70% 0;
+  //display: flex;
+  //padding: 15px;
   position: relative;
   max-width: 540px;
   width: 100%;
-  height: 270px;
+  height: 420px;
   z-index: 0;
-
+  //padding: 10px;
   &:hover ${ImageWrapperBox} {
     visibility: visible;
   }
 `
+const Img = styled.img`
+  max-width: 540px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  //position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 7px;
+`
 const ProjectName = styled.h4`
   color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  text-align: center;
+  //display: flex;
+  //flex-direction: row;
+  //justify-content: center;
   padding-top: 15px;
   margin: 0 0 15px;
 `
