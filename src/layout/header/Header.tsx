@@ -1,17 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import {Nav} from "./nav/Navbar";
-import spacerocket from "../../assets/images/logo/spacerocket.svg"
+import rocket from "../../assets/images/logo/spacerocket.svg"
+import {Container} from "../../components/Container";
+import {FlexWrapper} from "../../components/FlexWrapper";
 
 export const Header = () => {
     return (
         <HeaderWrapper>
-            <Logo viewBox={'0 0 72 72'}>
-                <a href={'/#'}>
-                    <use xlinkHref={`${spacerocket}#${'space-rocket'}`}/>
-                </a>
-            </Logo>
-            <Nav/>
+            <Container>
+                <FlexWrapper justify={'space-between'} align={'center'}>
+                    <Logo viewBox={'0 0 72 72'}>
+                        <a href={'/#'}>
+                            <use xlinkHref={`${rocket}#${'space-rocket'}`}/>
+                        </a>
+                    </Logo>
+                    <Nav/>
+                </FlexWrapper>
+            </Container>
         </HeaderWrapper>
     );
 }
@@ -22,16 +28,9 @@ const Logo = styled.svg<{ viewBox: string }>`
 `
 
 const HeaderWrapper = styled.header`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-height: max-content;
-  width: 100%;
   background-color: #0f0f11;
-  padding: 10px;
   position: sticky;
   top: 0;
   z-index: 99999;
   opacity: .95;
 `
-
