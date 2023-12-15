@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   margin-bottom: 25px;
 
   p {
-    color: ${theme.colors.fonts.span};
+    color: ${theme.colors.fonts.text};
   }
 
   h2 {

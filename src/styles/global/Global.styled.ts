@@ -12,7 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background-size: cover;
-    background-color: #1a181d;
+    //background-color: #1a181d;
+    background-color: #0f0f0f;
     margin: 0;
     //color: #f5f5f7;
     color: ${theme.colors.fonts.font};
@@ -41,11 +42,22 @@ export const GlobalStyle = createGlobalStyle`
 
   p {
     font-size: 16px;
-    color: ${theme.colors.fonts.font};
+    font-weight: 400;
+    line-height: 1.6;
+    color: ${theme.colors.fonts.text};
   }
 
+  span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
   h2 {
-    color: ${theme.colors.fonts.font};
     font-weight: 500;
     line-height: 1.2;
   }

@@ -5,7 +5,7 @@ export const theme = {
         accent: '',
         fonts: {
             font: '#fff',
-            span: '#9f9f9f',
+            text: '#9f9f9f',
         }
 
     }
