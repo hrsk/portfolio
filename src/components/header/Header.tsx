@@ -9,39 +9,42 @@ type PropsType = {
 export const Header = (props: PropsType) => {
     return (
         <Wrapper>
-            <p>{props.description}</p>
+            <span>{props.description}</span>
             <h2>{props.title}</h2>
         </Wrapper>
 
     );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.div.attrs((props: PropsType) => ({
+    content: "" || props.title
+}))`
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  height: 100%;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 2rem;
 
-  p {
+  span {
     color: ${theme.colors.fonts.text};
+    border-bottom: 2px solid rgba(0, 158, 102, 100);
+    margin-bottom: 0;
+    line-height: 1;
+    z-index: 1;
   }
 
   h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 64px;
-    font-weight: 800;
-  }
-
-  h2::before {
     content: "";
     position: absolute;
-    background: #fff;
-    width: 70px;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    margin-bottom: 0;
+    color: #fff;
+    opacity: .03;
+    font-size: 8.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    z-index: 0;
   }
 `
