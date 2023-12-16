@@ -1,52 +1,53 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Nav = () => {
+export const Navbar = (props: { menuItems: Array<string> }) => {
     return (
-        <NavWrapper>
-            <ListWrapper>
-                <li><a href="/homepage">Homepage</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/skills">Skills</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/contacts">Contacts</a></li>
-            </ListWrapper>
-        </NavWrapper>
+        <NavbarWrapper>
+            {
+                <ul>
+                    {
+                        props.menuItems.map((item, index) => {
+                            return <li key={index}>
+                                <a href={`/${item.toLowerCase()}`}>
+                                    {item}
+                                </a>
+                            </li>
+                        })
+                    }
+                </ul>
+            }
+        </NavbarWrapper>
     );
 }
 
-const NavWrapper = styled.nav`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`
-
-const ListWrapper = styled.ul`
-  display: flex;
-  flex-flow: row;
-  gap: 40px;
-  list-style: none;
+const NavbarWrapper = styled.nav`
+  ul {
+    display: flex;
+    flex-flow: row;
+  }
 
   li {
     display: flex;
     color: #f5f5f7;
     position: relative;
+    margin-right: 32px;
+
     a {
       text-decoration: none;
       color: #f5f5f7;
     }
 
     a:hover {
-      color: #f5f5f7;
+      color: #e6e6e6;
     }
 
     a:hover::before {
       content: "";
       position: absolute;
-      background: #f5f5f7;
-      width: 80px;
-      height: 2px;
+      background: #e6e6e6;
+      width: 100%;
+      height: 1px;
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 50%);
