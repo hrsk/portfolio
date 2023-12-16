@@ -113,8 +113,8 @@ const Img = styled.img`
   left: 0;
   border-radius: 7px;
 `
-const ProjectName = styled.h4`
-  color: #ffffff;
+const ProjectName = styled.h3`
+  //color: #ffffff;
   text-align: center;
   //display: flex;
   //flex-direction: row;

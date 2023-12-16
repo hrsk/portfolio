@@ -75,8 +75,8 @@ export const Skills = () => {
     );
 }
 
-const Wrapper = styled.div`
-  padding: 15px 0 15px 0;
+const Wrapper = styled.section`
+  //padding: 15px 0 15px 0;
 `
 const SkillsWrapper = styled.div`
   display: flex;

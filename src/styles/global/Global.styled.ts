@@ -27,12 +27,17 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  section {
+    padding: 80px 0; 
+  }
+
   a {
     text-decoration: none;
+    color: ${theme.colors.fonts.font};
   }
 
   ul {
-    list-style: unset;
+    list-style: none;
   }
 
   button {

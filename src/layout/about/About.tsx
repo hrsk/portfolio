@@ -44,8 +44,8 @@ export const About = () => {
 }
 
 const AboutWrapper = styled.section`
-  padding: 15px 0 15px 0;
-  margin-bottom: 120px;
+  //padding: 15px 0 15px 0;
+  //margin-bottom: 120px;
 `
 const Text = styled.p`
   border-bottom: 2px solid rgba(255, 255, 255, .08);

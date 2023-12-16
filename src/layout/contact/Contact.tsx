@@ -39,9 +39,9 @@ export const Contact = () => {
 }
 
 const ContactWrapper = styled.section`
-  display: flex;
-  flex-flow: column;
-  padding: 15px 0 15px 0;
+  //display: flex;
+  //flex-flow: column;
+  //padding: 15px 0 15px 0;
 `
 
 const ContactContainer = styled.div`
