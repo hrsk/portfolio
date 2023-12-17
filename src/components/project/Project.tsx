@@ -11,9 +11,8 @@ export const Project = (props: PropsType) => {
         <ProjectContainer>
             <ImageWrapperContainer>
                 <ImageWrapperBox>
-                    <p>{props.descriptionText}</p>
-                    <ClickedLink href={`https://github.com/hrsk/classwork-todolist}`}>More Info</ClickedLink>
-
+                    <Text>{props.descriptionText}</Text>
+                    <Button as={'a'} href={`https://github.com/hrsk/classwork-todolist`} type={'button'}>More Info</Button>
                 </ImageWrapperBox>
                 <Img src={props.src} alt={'todo'}/>
             </ImageWrapperContainer>
@@ -23,61 +22,36 @@ export const Project = (props: PropsType) => {
         </ProjectContainer>
     )
 }
-// const Description = styled.div`
-//   padding: 5px 20px;
-//   text-align: center;
-//
-//   p {
-//     font-size: 14px;
-//     font-weight: 400;
-//     line-height: 1.7;
-//     color: #ffffff;
-//   }
-//
-//   a {
-//     text-decoration: none;
-//   }
-// `
-// const LinkBox = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   gap: 20px;
-// `
-const ClickedLink = styled.a`
-  color: #009e66;
-  font-weight: 600;
-  font-size: 18px;
 
-  &:visited {
-    color: #009e66;
-    text-decoration: none;
-  }
-
-  &:hover {
-    color: #009e66;
-    text-decoration: none;
-  }
-
-  &:active {
-    color: #009e66;
-    text-decoration: none;
-  }
-`
-
-const ProjectContainer = styled.article`
-  //display: flex;
-  //flex-direction: column;
-  //overflow: hidden;
-  //position: relative;
+const ProjectContainer = styled.div`
   max-width: 540px;
   width: 100%;
 `
+
+const Text = styled.p`
+  padding: 25px 15px ;
+`
+const Button = styled.button.attrs((props) => ({
+    type: props.type || 'submit'
+}))`
+  :hover {
+    width: max-content;
+    padding: 10px 35px;
+    border-radius: 30px;
+    background-color: #009e66;
+    border: 5px solid #009e66;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+`
+
 const ImageWrapperBox = styled.div`
   background-color: rgba(0, 0, 0, .9);
   bottom: 0;
   position: absolute;
-  //transition: all .15s ease-in-out;
   visibility: hidden;
   max-width: 540px;
   width: 100%;
@@ -85,20 +59,22 @@ const ImageWrapperBox = styled.div`
   z-index: 1;
   display: flex;
   flex-direction: column;
-  padding: 15px;
-  //align-items: center;
+  border-radius: 7px;
+  align-items: center;
   justify-content: center;
   text-align: center;
+
+  ${Button} {
+    border-bottom: 5px solid #009e66;
+  }
+
 `
 const ImageWrapperContainer = styled.div`
-  //display: flex;
-  //padding: 15px;
+
   position: relative;
   max-width: 540px;
   width: 100%;
-  height: 420px;
   z-index: 0;
-  //padding: 10px;
   &:hover ${ImageWrapperBox} {
     visibility: visible;
   }
@@ -108,17 +84,11 @@ const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  //position: absolute;
   top: 0;
   left: 0;
   border-radius: 7px;
 `
 const ProjectName = styled.h3`
-  //color: #ffffff;
   text-align: center;
-  //display: flex;
-  //flex-direction: row;
-  //justify-content: center;
   padding-top: 15px;
-  margin: 0 0 15px;
 `

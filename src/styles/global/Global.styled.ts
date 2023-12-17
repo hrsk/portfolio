@@ -46,9 +46,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.4;
+    letter-spacing: 1px;
     color: ${theme.colors.fonts.text};
   }
 
@@ -64,6 +65,10 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-weight: 500;
+    line-height: 1.2;
+  }
+  h3 {
+    font-weight: 400;
     line-height: 1.2;
   }
 `

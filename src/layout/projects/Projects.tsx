@@ -41,17 +41,4 @@ export const Projects = () => {
     );
 }
 
-const ProjectsSection = styled.section`
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
-  //align-content: center;
-  //height: 100vh;
-`
-// const ProjectsWrapper = styled.div`
-//   display: flex;
-//   width: 100%;
-//   flex-direction: row;
-//   justify-content: center;
-//   gap: 50px;
-// `
+const ProjectsSection = styled.section``
