@@ -17,9 +17,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     //color: #f5f5f7;
     color: ${theme.colors.fonts.font};
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 1.95;
     font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -43,6 +42,11 @@ export const GlobalStyle = createGlobalStyle`
   button {
     background-color: unset;
     border: unset;
+    color: ${theme.colors.fonts.font};
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
   }
 
   p {

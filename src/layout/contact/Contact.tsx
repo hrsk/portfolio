@@ -1,47 +1,70 @@
 import React from "react";
 import {Header} from "../../components/header/Header";
 import styled from "styled-components";
+import {Container} from "../../components/Container";
+import {theme} from "../../styles/global/Theme";
+import sprite from "../../assets/contact/sprite.svg";
 
 export const Contact = () => {
     return (
         <ContactWrapper>
-            <Header description={"Feel free to contact me anytimes"}
-                    title={"Get in Touch"}
-            />
-            <ContactContainer>
-                <ContactsInfoWrapper>
-                    <h3>ADDRESS</h3>
-                    {/*<p>Always available for freelance<br/>*/}
-                    {/*    work if the right project comes along,<br/>*/}
-                    {/*    Feel free to contact me!<br/>*/}
-                    {/*</p>*/}
-                    <p>
-                        4th Floor, Plot No.22,
-                        <br/>
-                        145 Murphy Canyon Rd.
-                        <br/>
-                        San Diego CA 2028
-                    </p>
-                    <p><span>icon</span>+00000000000</p>
-                    <p><span>icon</span>+00000000000</p>
-                    <p><span>icon</span>chat@example.com</p>
-                </ContactsInfoWrapper>
-                <Form>
-                    <h3>SEND US A NOTE</h3>
-                    <Field type={'text'} placeholder={'Name'}/>
-                    <Field type={'email'} placeholder={'Email'}/>
-                    <textarea placeholder={'Message'}/>
-                    <Button>Send Message</Button>
-                </Form>
-            </ContactContainer>
+            <Container>
+                <Header description={"Feel free to contact me anytimes"}
+                        title={"Get in Touch"}
+                />
+                <ContactContainer>
+                    <ContactsInfoWrapper>
+                        <h3>ADDRESS</h3>
+                        <Icon>
+                            <svg>
+                                <use xlinkHref={`${sprite}#${'location_icon'}`}/>
+                            </svg>
+                            <span>
+                            4th Floor, Plot No.22,
+                            <br/>
+                            145 Murphy Canyon Rd.
+                            <br/>
+                            San Diego CA 2028
+                            </span>
+                        </Icon>
+                        <Icon>
+                            <svg>
+                                <use xlinkHref={`${sprite}#${'call_icon'}`}/>
+                            </svg>
+                            <span>+00000000000</span>
+                        </Icon>
+                        <Icon>
+                            <svg>
+                                <use xlinkHref={`${sprite}#${'message_icon'}`}/>
+                            </svg>
+                            <span>chat@example.com</span>
+                        </Icon>
+                    </ContactsInfoWrapper>
+                    <Form>
+                        <h3>SEND US A NOTE</h3>
+                        <Field type={'text'} placeholder={'name'}/>
+                        <Field type={'email'} placeholder={'email'}/>
+                        <Field as={'textarea'} placeholder={'message'}/>
+                        <ButtonsWrapper>
+                            <Button>Send Message</Button>
+                        </ButtonsWrapper>
+                    </Form>
+                </ContactContainer>
+            </Container>
         </ContactWrapper>
     );
 }
 
 const ContactWrapper = styled.section`
-  //display: flex;
-  //flex-flow: column;
-  //padding: 15px 0 15px 0;
+`
+const ContactsInfoWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+
+  h3 {
+    font-weight: 600;
+    text-align: center;
+  }
 `
 
 const ContactContainer = styled.div`
@@ -50,23 +73,15 @@ const ContactContainer = styled.div`
   justify-content: space-around;
 `
 
-const Form = styled.form`
+const Icon = styled.p`
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 540px;
+  gap: 25px;
+  align-items: center;
 
-  h3 {
-    padding-bottom: 15px;
-  }
-  
-  textarea {
-    width: 100%;
-    height: 120px;
-    float: left;
-    background-color: #343a40;
-    margin-bottom: 25px;
+  svg {
+    height: 30px;
+    width: 30px;
+    fill: ${theme.colors.primaryColor};
   }
 `
 
@@ -74,29 +89,66 @@ const Field = styled.input.attrs((props) => ({
     type: props.type,
     placeholder: props.placeholder,
 }))`
-  height: 30px;
-  margin-bottom: 25px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: ${theme.colors.fonts.font};
+  padding: 7px 15px;
   min-width: 540px;
   width: 100%;
-  background-color: #343a40;
+  background-color: ${theme.colors.bgColorField};
+  text-transform: capitalize;
+  border-radius: 8px;
+  border: 1px solid ${theme.colors.borderColor};
+
+  &:focus {
+    box-shadow: 0 5px 15px rgba(159, 159, 159, .4);
+  }
+
+  &::placeholder {
+    color: ${theme.colors.fonts.text};
+  }
+
+  &:focus-visible {
+    outline: 1px solid ${theme.colors.borderColor};
+  }
 `;
 
 const Button = styled.button.attrs((props) => ({
     type: props.type || 'submit'
 }))`
-  width: 150px;
-  height: 35px;
-  border-radius: 15px;
-  background-color: forestgreen;
-  color: white;
+  width: max-content;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: ${theme.colors.primaryColor};
+  border: 1px solid ${theme.colors.primaryColor};
+
+  padding: 10px 35px;
 `
 
-const ContactsInfoWrapper = styled.div`
+const ButtonsWrapper = styled.div`
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  justify-content: end;
+`
+
+const Form = styled.form`
+  grid-row-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 540px;
+  gap: 25px;
 
   h3 {
-    padding-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  textarea {
+    width: 100%;
+    height: 120px;
+    background-color: #343a40;
+    resize: none;
   }
 `
