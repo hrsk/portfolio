@@ -5,6 +5,7 @@ import {Footer} from "./layout/footer/Footer";
 import {About} from "./layout/about/About";
 import {Contact} from "./layout/contact/Contact";
 import {Projects} from "./layout/projects/Projects";
+import {Slogan} from "./layout/slogan/Slogan";
 
 export const App = () => {
     return (
@@ -13,6 +14,7 @@ export const App = () => {
             <About/>
             <Projects/>
             <Skills/>
+            <Slogan/>
             <Contact/>
             <Footer/>
         </>
