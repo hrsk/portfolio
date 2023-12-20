@@ -41,9 +41,11 @@ const Logo = styled.a`
 `
 
 const HeaderWrapper = styled.header`
-  background-color: #0f0f11;
-  position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
+  background-color: #111;
+  position: fixed;
   z-index: 99999;
   opacity: .95;
 `
