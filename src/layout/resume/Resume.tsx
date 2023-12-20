@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
 import {theme} from "../../styles/global/Theme";
 import {Skills} from "./skills/Skills";
+import {ResumeInformation} from "./ResumeInformation";
 
 export const Resume = () => {
     return (
@@ -12,6 +13,7 @@ export const Resume = () => {
             <Header description={'Check out my resume'} title={'Resume'}/>
             <FlexWrapper>
                 <Container>
+                    <ResumeInformation/>
                     <SectionHeader description={'My level of knowledge in some tools'} title={'My Skills'}/>
                     <Skills/>
                 </Container>
