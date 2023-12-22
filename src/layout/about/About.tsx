@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import ph from "../../assets/images/photo/photo.jpg";
+import {Testimonials} from "../testimonials/Testimonials";
 
 export const About = () => {
     return (
@@ -38,70 +39,71 @@ export const About = () => {
                         </LinksWrapper>
                     </Description>
                 </FlexWrapper>
+                <Testimonials/>
             </Container>
         </AboutWrapper>
     );
 }
 
 const AboutWrapper = styled.section`
-  //padding: 15px 0 15px 0;
-  //margin-bottom: 120px;
+    //padding: 15px 0 15px 0;
+    //margin-bottom: 120px;
 `
 const Text = styled.p`
-  border-bottom: 2px solid rgba(255, 255, 255, .08);
-  margin-bottom: 0;
-  padding-bottom: 36px;
+    border-bottom: 2px solid rgba(255, 255, 255, .08);
+    margin-bottom: 0;
+    padding-bottom: 36px;
 `
 const Description = styled.div`
-  span {
-    color: #009e66;
-    padding-bottom: 15px;
-  }
+    span {
+        color: #009e66;
+        padding-bottom: 15px;
+    }
 
-  h1 {
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
+    h1 {
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
 
 `
 
 const ContactWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row-gap: 15px;
-  padding: 15px 0;
-  margin-bottom: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 15px;
+    padding: 15px 0;
+    margin-bottom: 4px;
 `
 
 const Image = styled.img`
-  object-fit: cover;
-  width: 430px;
-  height: 450px;
-  max-height: 100%;
-  max-width: 100%;
+    object-fit: cover;
+    width: 430px;
+    height: 450px;
+    max-height: 100%;
+    max-width: 100%;
 
-  border: 2px solid #0000002D;
-  border-radius: 0.25rem;
-  padding: 0.25rem;
+    border: 2px solid #0000002D;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
 `
 
 const Button = styled.button.attrs((props) => ({
     type: props.type || 'submit'
 }))`
-  margin-right: 24px;
-  padding: 10px 35px;
-  border-radius: 30px;
-  background-color: #009e66;
-  border: 1px solid #009e66;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #fff;
+    margin-right: 24px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    background-color: #009e66;
+    border: 1px solid #009e66;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
 `
 const Link = styled.link`
-  text-decoration: none;
-  color: #009e66;
+    text-decoration: none;
+    color: #009e66;
 `
 const LinksWrapper = styled.div`
-  display: flex;
+    display: flex;
 `
