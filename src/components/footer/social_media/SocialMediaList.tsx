@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import {SocialMediaItem} from "./SocialMediaItem";
 
-export const socialMediaItems: Array<SocialMediaList> = [
+export const socialMediaItems: Array<SocialMediaListType> = [
     {id: 1, title: 'facebook', link: 'https://facebook.com/'},
     {id: 2, title: 'github', link: 'https://github.com/hrsk'},
     {id: 3, title: 'linkedin', link: 'https://linkedin.com/'},
@@ -10,7 +10,7 @@ export const socialMediaItems: Array<SocialMediaList> = [
     {id: 5, title: 'twitter', link: 'https://twitter.com/'},
 ]
 
-type SocialMediaList = {
+type SocialMediaListType = {
     id: number
     title: string
     link: string

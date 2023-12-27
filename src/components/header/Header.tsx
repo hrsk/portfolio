@@ -51,19 +51,19 @@ const Wrapper = styled.div.attrs((props: PropsType) => ({
     margin-bottom: 2rem;
 
     span {
-        color: ${theme.colors.fonts.text};
+        //color: ${theme.colors.fonts.text};
     }
 
     h2 {
-        content: "";
+        //content: "";
         position: absolute;
-        margin-bottom: 0;
-        color: #fff;
+        //margin-bottom: 0;
+        //color: #fff;
         opacity: .03;
         font-size: 8.25rem;
         text-transform: uppercase;
         font-weight: 600;
-        z-index: 0;
+        //z-index: 0;
     }
 
     ${AnimatedBar}:before {
@@ -75,7 +75,7 @@ const Wrapper = styled.div.attrs((props: PropsType) => ({
         content: '';
         height: 100%;
         position: absolute;
-        top: 0;
+        //top: 0;
         left: 8px;
         width: 4px;
     }

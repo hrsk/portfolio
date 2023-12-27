@@ -42,12 +42,11 @@ export const Contact = () => {
                     </ContactsInfoWrapper>
                     <Form>
                         <h3>SEND US A NOTE</h3>
-                        <Field type={'text'} placeholder={'name'}/>
-                        <Field type={'email'} placeholder={'email'}/>
-                        <Field as={'textarea'} placeholder={'message'}/>
-                        <ButtonsWrapper>
-                            <Button>Send Message</Button>
-                        </ButtonsWrapper>
+                        <Field type={'text'} placeholder={'Name'} style={{gridArea: '2 / 2 / 3 / 2'}}/>
+                        <Field type={'email'} placeholder={'Email'} style={{gridArea: '2 / 1 / 3 / 1'}}/>
+                        <Field type={'text'} placeholder={'Subject'} style={{gridArea: '3 / 1 / 4 / 3'}} />
+                        <Field as={'textarea'} placeholder={'Message'}/>
+                        <Button>Send Message</Button>
                     </Form>
                 </ContactContainer>
             </Container>
@@ -58,19 +57,23 @@ export const Contact = () => {
 const ContactWrapper = styled.section`
 `
 const ContactsInfoWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 0.2fr);
+    //align-items: center;
+    //grid-column-gap: 25px;
+    grid-row-gap: 15px;
 
-  h3 {
-    font-weight: 600;
-    text-align: center;
-  }
+    h3 {
+        font-weight: 600;
+        text-align: center;
+    }
 `
 
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `
 
 const Icon = styled.p`
@@ -95,7 +98,7 @@ const Field = styled.input.attrs((props) => ({
   letter-spacing: 0.1em;
   color: ${theme.colors.fonts.font};
   padding: 7px 15px;
-  min-width: 540px;
+  //min-width: 540px;
   width: 100%;
   background-color: ${theme.colors.bgColorField};
   text-transform: capitalize;
@@ -118,37 +121,36 @@ const Field = styled.input.attrs((props) => ({
 const Button = styled.button.attrs((props) => ({
     type: props.type || 'submit'
 }))`
-  width: max-content;
-  cursor: pointer;
-  border-radius: 30px;
-  background-color: ${theme.colors.primaryColor};
-  border: 1px solid ${theme.colors.primaryColor};
-
-  padding: 10px 35px;
-`
-
-const ButtonsWrapper = styled.div`
-  display: flex;
-  justify-content: end;
+    width: max-content;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: ${theme.colors.primaryColor};
+    border: 1px solid ${theme.colors.primaryColor};
+    grid-area: 5 / 1 / 6 / 3;
+    padding: 10px 35px;
 `
 
 const Form = styled.form`
-  grid-row-gap: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  min-width: 540px;
-  gap: 25px;
 
-  h3 {
-    font-weight: 600;
-    text-align: center;
-  }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 0.4fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    min-width: 570px;
 
-  textarea {
-    width: 100%;
-    height: 120px;
-    background-color: #343a40;
-    resize: none;
-  }
+    h3 {
+        grid-area: 1 / 1 / 2 / 3;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    textarea {
+        grid-area: 4 / 1 / 5 / 3;
+        width: 100%;
+        height: 80px;
+        background-color: #343a40;
+        resize: none;
+    }
+
 `

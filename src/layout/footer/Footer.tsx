@@ -29,4 +29,3 @@ const Copyright = styled.small`
     letter-spacing: 0.1em;
     color: ${theme.colors.fonts.text}
 `
-

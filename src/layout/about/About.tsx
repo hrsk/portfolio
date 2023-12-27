@@ -39,7 +39,7 @@ export const About = () => {
                         </LinksWrapper>
                     </Description>
                 </FlexWrapper>
-                <Testimonials/>
+                {/*<Testimonials/>*/}
             </Container>
         </AboutWrapper>
     );
