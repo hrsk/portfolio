@@ -13,38 +13,56 @@ export const Contact = () => {
                         title={"Get in Touch"}
                 />
                 <ContactContainer>
-                    <ContactsInfoWrapper>
+                    <ContactInfoContainer>
                         <h3>ADDRESS</h3>
+                        <Icon>
+                            <svg viewBox={'0 0 24 24'}>
+                                <use xlinkHref={`${sprite}#${'me_icon'}`}/>
+                            </svg>
+                            <ContactInfo>
+                                <span>Name</span>
+                                <p>Yahor Hurski</p>
+                            </ContactInfo>
+                        </Icon>
+
                         <Icon>
                             <svg>
                                 <use xlinkHref={`${sprite}#${'location_icon'}`}/>
                             </svg>
-                            <span>
-                            4th Floor, Plot No.22,
-                            <br/>
-                            145 Murphy Canyon Rd.
-                            <br/>
-                            San Diego CA 2028
-                            </span>
+                            <ContactInfo>
+                                <span>Location</span>
+                                <p>
+                                    Minsk, Belarus
+                                </p>
+                            </ContactInfo>
                         </Icon>
+
                         <Icon>
                             <svg>
                                 <use xlinkHref={`${sprite}#${'call_icon'}`}/>
                             </svg>
-                            <span>+00000000000</span>
+                            <ContactInfo>
+                                <span>Call Me</span>
+                                <p>+00000000000</p>
+                            </ContactInfo>
                         </Icon>
+
                         <Icon>
                             <svg>
                                 <use xlinkHref={`${sprite}#${'message_icon'}`}/>
                             </svg>
-                            <span>chat@example.com</span>
+                            <ContactInfo>
+                                <span>Email Me</span>
+                                <p>chat@example.com</p>
+                            </ContactInfo>
                         </Icon>
-                    </ContactsInfoWrapper>
+
+                    </ContactInfoContainer>
                     <Form>
                         <h3>SEND US A NOTE</h3>
                         <Field type={'text'} placeholder={'Name'} style={{gridArea: '2 / 2 / 3 / 2'}}/>
                         <Field type={'email'} placeholder={'Email'} style={{gridArea: '2 / 1 / 3 / 1'}}/>
-                        <Field type={'text'} placeholder={'Subject'} style={{gridArea: '3 / 1 / 4 / 3'}} />
+                        <Field type={'text'} placeholder={'Subject'} style={{gridArea: '3 / 1 / 4 / 3'}}/>
                         <Field as={'textarea'} placeholder={'Message'}/>
                         <Button>Send Message</Button>
                     </Form>
@@ -56,13 +74,16 @@ export const Contact = () => {
 
 const ContactWrapper = styled.section`
 `
-const ContactsInfoWrapper = styled.div`
+const ContactInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+const ContactInfoContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 0.2fr);
-    //align-items: center;
-    //grid-column-gap: 25px;
-    grid-row-gap: 15px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 
     h3 {
         font-weight: 600;
@@ -71,51 +92,49 @@ const ContactsInfoWrapper = styled.div`
 `
 
 const ContactContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 `
+const Icon = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
 
-const Icon = styled.p`
-  display: flex;
-  gap: 25px;
-  align-items: center;
-
-  svg {
-    height: 30px;
-    width: 30px;
-    fill: ${theme.colors.primaryColor};
-  }
+    svg {
+        height: 30px;
+        width: 30px;
+        fill: ${theme.colors.primaryColor};
+    }
 `
 
 const Field = styled.input.attrs((props) => ({
     type: props.type,
     placeholder: props.placeholder,
 }))`
-  font-family: Poppins, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  color: ${theme.colors.fonts.font};
-  padding: 7px 15px;
-  //min-width: 540px;
-  width: 100%;
-  background-color: ${theme.colors.bgColorField};
-  text-transform: capitalize;
-  border-radius: 8px;
-  border: 1px solid ${theme.colors.borderColor};
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: ${theme.colors.fonts.font};
+    padding: 4px 8px;
+    width: 100%;
+    background-color: #161616;
+    text-transform: capitalize;
+    border: none;
 
-  &:focus {
-    box-shadow: 0 5px 15px rgba(159, 159, 159, .4);
-  }
+    &:focus {
+        border-bottom: 2px solid ${theme.colors.primaryColor};
+    }
 
-  &::placeholder {
-    color: ${theme.colors.fonts.text};
-  }
+    &::placeholder {
+        color: ${theme.colors.fonts.text};
+    }
 
-  &:focus-visible {
-    outline: 1px solid ${theme.colors.borderColor};
-  }
+    &:focus-visible {
+        outline: none;
+    }
 `;
 
 const Button = styled.button.attrs((props) => ({
@@ -148,8 +167,8 @@ const Form = styled.form`
     textarea {
         grid-area: 4 / 1 / 5 / 3;
         width: 100%;
-        height: 80px;
-        background-color: #343a40;
+        height: 125px;
+        background-color: #161616;
         resize: none;
     }
 
