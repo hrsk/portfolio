@@ -1,0 +1,73 @@
+@import "./../../vars.css";
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 60px;
+
+}
+.text {
+    border-bottom: 2px solid rgba(255, 255, 255, .08);
+    margin-bottom: 0;
+    padding-bottom: 36px;
+}
+
+.description {
+    span {
+        color: var(--main-green);
+        padding-bottom: 15px;
+    }
+
+    h1 {
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+}
+
+.contactsWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 15px;
+    padding: 15px 0;
+    margin-bottom: 4px;
+}
+
+.photo {
+    object-fit: cover;
+    width: 430px;
+    height: 450px;
+    max-height: 100%;
+    max-width: 100%;
+
+    border: 2px solid #0000002D;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+
+.button {
+    margin-right: 24px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    background-color: var(--main-green);
+    border: 1px solid var(--main-green);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--main-text-color);
+    cursor: pointer;
+}
+.link {
+    text-decoration: none;
+    color: var(--main-green);
+}
+.linksWrapper {
+    display: flex;
+}

@@ -1,7 +1,9 @@
+import {About} from "../layout/about/About.tsx";
+
 export const Main = () => {
     return (
         <main>
-            content
+            <About/>
         </main>
     )
 }
